@@ -1,11 +1,23 @@
-import React, { Component } from "react"
-import { AppRegistry, Image } from "react-native"
+import React from "react"
+import { StyleSheet, Text, View } from "react-native"
 
-export default class Bananas extends Component {
+export default class App extends React.Component {
 	render() {
-		let pic = {
-			uri: "https://upload.wikimedia.org/wikipedia/commons/d/de/Bananavarieties.jpg"
-		}
-		return <Image source={pic} style={{ width: 193, height: 110 }} />
+		return (
+			<View style={styles.container}>
+				<Text>Good day!</Text>
+				<Text>This is the first app developed by JK in react native.</Text>
+				<Text>Shake your phone to open the developer menu.</Text>
+			</View>
+		)
 	}
 }
+
+const styles = StyleSheet.create({
+	container: {
+		flex: 1,
+		backgroundColor: "#fff",
+		alignItems: "center",
+		justifyContent: "center"
+	}
+})
